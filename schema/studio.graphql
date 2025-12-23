@@ -1,0 +1,16 @@
+type Studios {
+    name: String!
+}
+
+type Locations {
+    name: String!
+    belongsTo1: Studios!
+}
+
+type OpeningHours {
+    day: Int!
+    startHour: Int!
+    endHour: Int!
+
+    belongsTo1: Locations!
+}

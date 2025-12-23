@@ -1,0 +1,22 @@
+type AppointmentStates{
+    name: String!
+}
+
+type AppointmentTypes{
+    name: String!
+}
+
+type Appointments {
+    date: Date!
+    startHour: String!
+    endHour: String!
+
+    belongsTo: Members
+
+    staff_id: String!
+    member_id: String!
+    location_id: String!
+
+    associateTo: AppointmentStates @default(value: 1)
+    associateTo: AppointmentTypes
+}

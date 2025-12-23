@@ -1,0 +1,15 @@
+type Trainers {
+    name: String!
+    user_id: String!
+}
+
+type Schedules {
+    upcoming: String
+
+    name: String!
+    day:Int
+    startHour: Int!
+    endHour: Int!
+
+    belongsTo: Trainers!
+}
